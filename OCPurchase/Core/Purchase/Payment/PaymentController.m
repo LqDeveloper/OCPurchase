@@ -12,6 +12,12 @@
 @end
 
 @implementation PaymentController
+- (instancetype)init{
+    if (self = [super init]) {
+        self.paymentArr = [NSMutableArray array];
+    }
+    return self;
+}
 
 -(NSInteger)findPaymentWithId:(NSString *)productIdentifier{
     for (NSInteger i = 0;i < self.paymentArr.count;i++) {

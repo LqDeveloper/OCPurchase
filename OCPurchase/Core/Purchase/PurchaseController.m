@@ -84,7 +84,7 @@
 }
 
 -(void)assertCompleteTransactionsWasCalled{
-    NSAssert(YES, @"completeTransactions() 在应用启动的时候回去调用");
+    NSAssert(self.completeController.complete != nil, @"completeTransactions() 在应用启动的时候回去调用");
 }
 
 - (void)paymentQueue:(nonnull SKPaymentQueue *)queue updatedTransactions:(nonnull NSArray<SKPaymentTransaction *> *)transactions {
@@ -99,12 +99,17 @@
 }
 
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue{
-    [self.restoreController restoreCompletedTransactionsFinished];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.restoreController restoreCompletedTransactionsFinished];
+    });
 }
 
 - (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error{
-    [self.restoreController restoreCompletedTransactionsFailed:error];
+    dispatch_async(dispatch_get_main_queue(), ^{
+       [self.restoreController restoreCompletedTransactionsFailed:error];
+    });
 }
+
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedDownloads:(NSArray<SKDownload *> *)downloads{
     if (self.updatedDownloadsHandler) {

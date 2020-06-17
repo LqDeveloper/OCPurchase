@@ -49,7 +49,9 @@
     
     __weak typeof(self) weakSelf = self;
     return [self.validator validateWithData:receiptData completion:^(ValidateReceiptModel * _Nonnull result) {
-        completion(result);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(result);
+        });
         weakSelf.validator = nil;
     }];
 }

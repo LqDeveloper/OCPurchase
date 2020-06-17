@@ -11,7 +11,8 @@
 @implementation RestoreResult
 - (instancetype)initWithResults:(NSArray<PurchaseResult *> *)results{
     if (self = [super init]) {
-        self.restoreResults = results;
+        NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"transactionDate" ascending:NO];
+         self.restoreResults = [results sortedArrayUsingDescriptors:@[sort]];
     }
     return self;
 }

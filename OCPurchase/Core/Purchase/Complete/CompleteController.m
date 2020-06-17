@@ -30,9 +30,11 @@
         }
     }
     
-    if (unhandle.count > 0) {
-        CompleteResult *result = [[CompleteResult alloc]initWithResults:purchases];
-        self.complete.callBack(result);
+    if (purchases.count > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CompleteResult *result = [[CompleteResult alloc]initWithResults:purchases];
+            self.complete.callBack(result);
+        });
     }
     return unhandle;
 }

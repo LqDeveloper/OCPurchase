@@ -12,6 +12,7 @@
 #import "PaymentResult.h"
 #import "RestoreResult.h"
 #import "CompleteResult.h"
+#import "SKProduct+OCPurchase.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCPurchase : NSObject

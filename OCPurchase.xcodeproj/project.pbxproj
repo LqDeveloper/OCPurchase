@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513416222490E8E800BEEBDB /* PurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 513416212490E8E800BEEBDB /* PurchaseController.m */; };
+		5150F51E2499B91400906D74 /* SKProduct+OCPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5150F51D2499B91400906D74 /* SKProduct+OCPurchase.m */; };
 		5164B73F2491F59600F6096C /* PaymentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5164B73E2491F59600F6096C /* PaymentModel.m */; };
 		5164B7422491F60200F6096C /* PaymentResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5164B7412491F60200F6096C /* PaymentResult.m */; };
 		5164B7462491FC0600F6096C /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5164B7452491FC0600F6096C /* PaymentController.m */; };
@@ -58,6 +59,8 @@
 /* Begin PBXFileReference section */
 		513416202490E8E800BEEBDB /* PurchaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurchaseController.h; sourceTree = "<group>"; };
 		513416212490E8E800BEEBDB /* PurchaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurchaseController.m; sourceTree = "<group>"; };
+		5150F51C2499B91400906D74 /* SKProduct+OCPurchase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKProduct+OCPurchase.h"; sourceTree = "<group>"; };
+		5150F51D2499B91400906D74 /* SKProduct+OCPurchase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+OCPurchase.m"; sourceTree = "<group>"; };
 		5164B73D2491F59600F6096C /* PaymentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentModel.h; sourceTree = "<group>"; };
 		5164B73E2491F59600F6096C /* PaymentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentModel.m; sourceTree = "<group>"; };
 		5164B7402491F60200F6096C /* PaymentResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentResult.h; sourceTree = "<group>"; };
@@ -153,6 +156,17 @@
 				513416212490E8E800BEEBDB /* PurchaseController.m */,
 			);
 			path = Purchase;
+			sourceTree = "<group>";
+		};
+		5150F51B2499B8F600906D74 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				519CD531248A4B4D00A8A507 /* NSArray+ProductInfo.h */,
+				519CD532248A4B4D00A8A507 /* NSArray+ProductInfo.m */,
+				5150F51C2499B91400906D74 /* SKProduct+OCPurchase.h */,
+				5150F51D2499B91400906D74 /* SKProduct+OCPurchase.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		5164B7432491FBA200F6096C /* Payment */ = {
@@ -256,6 +270,7 @@
 		519CD526248A37B200A8A507 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5150F51B2499B8F600906D74 /* Tool */,
 				5134161F2490E8BB00BEEBDB /* Purchase */,
 				51A38171248F516700840A3A /* Receipt */,
 				519CD52A248A3B7100A8A507 /* Product */,
@@ -272,8 +287,6 @@
 				519CD52C248A3BB700A8A507 /* ProductInfoRequest.m */,
 				519CD52E248A417C00A8A507 /* ProductController.h */,
 				519CD52F248A417C00A8A507 /* ProductController.m */,
-				519CD531248A4B4D00A8A507 /* NSArray+ProductInfo.h */,
-				519CD532248A4B4D00A8A507 /* NSArray+ProductInfo.m */,
 				51B87E5C2490DC39004F5579 /* ProductInfoModel.h */,
 				51B87E5D2490DC39004F5579 /* ProductInfoModel.m */,
 			);
@@ -431,6 +444,7 @@
 				5164B73F2491F59600F6096C /* PaymentModel.m in Sources */,
 				5164B7502492083900F6096C /* RestoreController.m in Sources */,
 				51A38177248F554400840A3A /* ReceiptValidator.m in Sources */,
+				5150F51E2499B91400906D74 /* SKProduct+OCPurchase.m in Sources */,
 				51B87E612490E0A5004F5579 /* ValidateReceiptModel.m in Sources */,
 				5164B75324920BE200F6096C /* RestoreResult.m in Sources */,
 				519CD4F9248A37AB00A8A507 /* ViewController.m in Sources */,

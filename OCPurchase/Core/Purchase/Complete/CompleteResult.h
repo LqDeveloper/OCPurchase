@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CompleteResult : NSObject
 @property(nonatomic,strong)NSArray<PurchaseResult *> *results;
+@property(nonatomic,strong,readonly)NSArray<PurchaseResult *> *restore;
+@property(nonatomic,strong,readonly)NSArray<PurchaseResult *> *purchased;
 -(instancetype)initWithResults:(NSArray<PurchaseResult *> *)results;
 @end
 

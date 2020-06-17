@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 //通过这个属性来判断restore是否失败
 @property(nonatomic,assign)BOOL isFailed;
 @property(nonatomic,strong,nullable)NSError *error;
-
 -(instancetype)initWithResults:(NSArray<PurchaseResult *> *)results;
 
 @end
