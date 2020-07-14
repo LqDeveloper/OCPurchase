@@ -103,8 +103,8 @@
         for (void (^block)(ProductInfoModel *) in query.blockArr) {
             block([[ProductInfoModel alloc] initWithProducts:products invalidIds:invalidIds error:nil]);
         }
+        [self removeQuery:query];
     });
-    [self removeQuery:query];
 }
 
 - (void)requestFailureWithRequest:(ProductInfoRequest *)request error:(NSError *)error{
@@ -113,7 +113,7 @@
         for (void (^block)(ProductInfoModel *) in query.blockArr) {
             block([[ProductInfoModel alloc] initWithProducts:nil invalidIds:nil error:error]);
         }
+        [self removeQuery:query];
     });
-    [self removeQuery:query];
 }
 @end
